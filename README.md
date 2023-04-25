@@ -1,4 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## About
+
+An auto complete component built with react and typescript. The component is built with the following features in mind:
+
+- Suggestions [ uses include method of matching ]
+- Highlighting of matched text
+- Clear suggestions/listdrop on blur
+- Clear suggestions/listdrop with the escape key
+- Has debounce functionality
+
+## App state visualization
+
+Below is the state machine for the app. Interactive visualization can be viewed from [xstate](https://stately.ai/viz) using the code below.
+
+```
+const machine = {
+  initial: 'idle',
+  states: {
+    idle: {
+      on: {
+        SEARCH: 'loading',
+      },
+    },
+    loading: {
+      on: {
+        SUCCESS: 'showlist',
+        ERROR: 'error',
+      },
+    },
+    showlist: {
+      on: {
+        SEARCH: 'loading',
+        CLEAR: 'idle',
+        SELECT_ITEM: 'idle',
+      },
+    },
+    error: {
+      on: {
+        SEARCH: 'loading',
+      },
+    },
+  },
+};
+```
 
 ## Getting Started
 
@@ -16,23 +59,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Recommendations
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Libraries I would have used for production ready app:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Handle Styling and Basic UI components: [Material UI](https://mui.com/) / [tailwindcss](https://tailwindcss.com/).
+- API and network caching : [useQuery](https://tanstack.com/query/v4/docs/react/reference/useQuery) or [SWR](https://swr.vercel.app/)
 
-## Learn More
+## TODO
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[] Style the input, droplist, loading and error components
+[] Add Error boundary
+[] Add tests
