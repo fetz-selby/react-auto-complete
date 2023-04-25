@@ -10,6 +10,9 @@ An auto complete component built with react and typescript. The component is bui
 
 ## App state visualization
 
+![Screenshot 2023-04-25 at 23 07 05](https://user-images.githubusercontent.com/6938921/234409225-17baf4ad-2d8e-4f5b-8f18-eb7053bfad6a.png)
+
+
 Below is the state machine for the app. Interactive visualization can be viewed from [xstate](https://stately.ai/viz) using the code below.
 
 ```
@@ -68,6 +71,6 @@ Libraries I would have used for production ready app:
 
 ## TODO
 
-[] Style the input, droplist, loading and error components
-[] Add Error boundary
-[] Add tests
+[ ] Style the input, droplist, loading and error components
+[ ] Add Error boundary
+[ ] Add tests
