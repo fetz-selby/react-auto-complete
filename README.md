@@ -9,6 +9,8 @@ An auto complete component built with react and typescript. The component is bui
 - Has debounce functionality
 
 ## App state visualization
+The diagram below shows the visualization of the state and transitions for the auto-complete component. State transitions are driven
+by events and they are finite.
 
 ![Screenshot 2023-04-25 at 23 07 05](https://user-images.githubusercontent.com/6938921/234409225-17baf4ad-2d8e-4f5b-8f18-eb7053bfad6a.png)
 
@@ -67,10 +69,10 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 Libraries I would have used for production ready app:
 
 - Handle Styling and Basic UI components: [Material UI](https://mui.com/) / [tailwindcss](https://tailwindcss.com/).
-- API and network caching : [useQuery](https://tanstack.com/query/v4/docs/react/reference/useQuery) or [SWR](https://swr.vercel.app/)
+- API and network caching : [useQuery](https://tanstack.com/query/v4/docs/react/reference/useQuery) / [SWR](https://swr.vercel.app/)
 
 ## TODO
 
-[ ] Style the input, droplist, loading and error components
-[ ] Add Error boundary
-[ ] Add tests
+- [ ] Style the input, droplist, loading and error components
+- [ ] Add Error boundary
+- [ ] Add tests
