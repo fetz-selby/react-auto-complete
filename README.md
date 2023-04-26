@@ -62,18 +62,6 @@ const machine = {
 ![Screenshot 2023-04-26 at 18 58 29](https://user-images.githubusercontent.com/6938921/234651370-aed0663f-cb0a-4b0e-99e5-459d251cce81.png)
 
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
@@ -90,3 +78,16 @@ Libraries I would have used for production ready app:
 - [ ] Style the input, droplist, loading and error components
 - [ ] Add Error boundary
 - [ ] Add tests
+
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
