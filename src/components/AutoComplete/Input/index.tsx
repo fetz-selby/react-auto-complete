@@ -6,12 +6,12 @@ import { useAutoCompleteContext } from '@/context/AutoComplete/AutoCompleteConte
  */
 
 const style = {
-  width: '15rem',
+  width: '20rem',
   height: '1.6rem',
   fontSize: '1rem',
   padding: '0.2rem',
-  border: '1px solid #FFFFFF',
-  borderRadius: '5px',
+  border: '1px solid #bebebe',
+  borderRadius: '2px',
 };
 
 const Input = () => {
@@ -21,6 +21,7 @@ const Input = () => {
   return (
     <input
       type="text"
+      placeholder="Search for airports..."
       value={search}
       style={style}
       onChange={(e) => handleSearch(e.target.value)}
