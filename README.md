@@ -48,6 +48,20 @@ const machine = {
 };
 ```
 
+## Auto complete view state
+#### idle state
+![Screenshot 2023-04-26 at 18 56 39](https://user-images.githubusercontent.com/6938921/234650615-9a61a729-b920-4b94-90ca-0da5ae7d32ef.png)
+
+#### loading state
+![Screenshot 2023-04-26 at 19 02 39](https://user-images.githubusercontent.com/6938921/234650916-103de6af-434b-4393-afff-23a526d824d5.png)
+
+#### showlist state
+![Screenshot 2023-04-26 at 19 03 24](https://user-images.githubusercontent.com/6938921/234651102-1fb433ab-c434-49ab-b084-524a23f96d61.png)
+
+#### error state
+![Screenshot 2023-04-26 at 18 58 29](https://user-images.githubusercontent.com/6938921/234651370-aed0663f-cb0a-4b0e-99e5-459d251cce81.png)
+
+
 ## Getting Started
 
 First, run the development server:
