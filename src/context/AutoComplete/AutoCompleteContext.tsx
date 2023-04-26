@@ -29,6 +29,7 @@ const AutoCompleteContext =
 
 const useAutoCompleteContext = () => useContext(AutoCompleteContext);
 const DELAY = 1500;
+const MIN_CHARACTERS = 2;
 
 let debounceRef: ReturnType<typeof debounce> | null = null;
 
@@ -72,9 +73,13 @@ const AutoCompleteProvider = ({ children }: AutoCompleteProviderProps) => {
   const handleSearch = (search: string) => {
     setState({ ...state, search });
 
-    if (search) {
+    if (search.trim().length > MIN_CHARACTERS) {
       makeRequest(search);
     } else {
+      /**
+       * If the search is less than 2 characters, cancel the debounce to prevent race conditions
+       */
+      debounceRef?.cancel();
       send({ type: ActionEventTypes.CLEAR });
     }
   };
