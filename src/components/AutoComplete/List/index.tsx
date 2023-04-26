@@ -11,11 +11,11 @@ import { ItemProps } from '@/api/api.types';
 const style = {
   display: 'block',
   position: 'absolute',
-  marginTop: '0.1rem',
   width: '25rem',
   maxHeight: '15rem',
   border: '1px solid #555555',
   overflowY: 'auto',
+  backgroundColor: '#FFFFFF',
 };
 
 const List = () => {
@@ -29,8 +29,10 @@ const List = () => {
       : null;
   };
 
-  return transitionState === TransitionStates.SHOWLIST ? (
-    <ul style={style}>{renderList()}</ul>
+  return transitionState === TransitionStates.SHOWLIST && results?.length ? (
+    <div>
+      <ul style={style}>{renderList()}</ul>
+    </div>
   ) : null;
 };
 
