@@ -2,7 +2,7 @@
 
 An auto complete component built with react and typescript. The component is built with the following features in mind:
 
-- Suggestions [ uses include method of matching ]
+- Suggestions after two characters [ uses include method of matching ]
 - Highlighting of matched text
 - Clear suggestions/listdrop on blur
 - Clear suggestions/listdrop with the escape key
